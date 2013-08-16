@@ -17,5 +17,6 @@ urlpatterns = patterns('',
 )
 
 urlpatterns += patterns('maustrep.views',
-    url(r'^$', 'home')
+    url(r'^$', 'main_trap'),
+    url(r'^(?P<descriptor>\w+)/$', 'main_trap')
 )

@@ -1,0 +1,10 @@
+[
+  {
+    "model": "maustrep.Trap",
+    "pk": 1,
+    "fields": {
+      "descriptor": "root",
+      "password": "Lennon"
+    }
+  }
+]
