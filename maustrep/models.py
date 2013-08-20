@@ -8,7 +8,7 @@ class Trap(models.Model):
     password = models.CharField(max_length="256", blank=False)
 
     def set_password(self, raw_password):
-        self.password = make_password(raw_password)
+        self.password = make_password(raw_password, "some_salt")
 
 
 
@@ -19,4 +19,7 @@ class TrapRecord(models.Model):
     ip_addr = models.CharField(max_length="128", blank=False)
     # date/time
     datetime = models.DateTimeField(auto_now=True)
+
+    def __unicode__(self):
+        return u'%s - %s' % (self.ip_addr, self.datetime)
 

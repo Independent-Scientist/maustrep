@@ -18,5 +18,7 @@ urlpatterns = patterns('',
 
 urlpatterns += patterns('maustrep.views',
     url(r'^$', 'main_trap'),
+    url(r'^register/$', 'register_trap'),
+    url(r'^list/$', 'list_trap_records'),
     url(r'^(?P<descriptor>\w+)/$', 'main_trap')
 )
